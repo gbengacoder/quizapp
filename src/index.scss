@@ -1,0 +1,250 @@
+body {
+  height: 99%;
+  border: 1px solid red;
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mainContainer {
+  font-family: sans-serif;
+  width: 690px;
+
+  overflow: hidden;
+
+  color: rgb(30, 29, 29);
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .container {
+    .qContainer {
+      width: 580px;
+      text-align: center;
+    }
+
+    .ansContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 12px 3px;
+
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      padding: 12px;
+
+      font-size: 1.2em;
+      .ans {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+        margin: 5px;
+        border-radius: 6px;
+        padding: 12px;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+
+      .selected {
+        background: #0e0d0d;
+        color: #000000;
+        color: white;
+        font-size: 1.3em;
+
+        margin: 5px;
+        border-radius: 6px;
+        padding: 12px;
+        cursor: pointer;
+      }
+    }
+  }
+  marquee {
+    margin-bottom: 22px;
+    font-size: 22px;
+  }
+
+  .top {
+    text-align: center;
+    font-size: 22px;
+    margin: 12px 0;
+  }
+  .levels {
+    .level {
+      height: 30px;
+      width: 120px;
+      background: green;
+      margin: 4px 0;
+      padding: 0 2px;
+    }
+  }
+
+  .qContainer {
+    margin: 0 auto;
+    width: fit-content;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+      rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 3% 2%;
+    font-size: 18x;
+    border-radius: 6px;
+  }
+  .timerContainer {
+    border: 5px solid green;
+    width: fit-content;
+    padding: 22px;
+    font-size: 6.2em;
+    border-radius: 50%;
+    margin: 5% auto;
+  }
+
+  .btnNext {
+    width: fit-content;
+    cursor: pointer;
+    margin: 0 auto;
+    display: flex;
+    color: white;
+    padding: 8px 22px;
+    font-size: 1.2em;
+    background: #000000;
+  }
+
+  .scoreModal {
+    height: 200px;
+    background: white;
+    width: 450px;
+    font-size: 1.5em;
+    color: black;
+    position: absolute;
+    top: 29%;
+    left: 17%;
+    text-align: center;
+
+    .content {
+      margin: 50px;
+      font-size: 1.1em;
+      text-align: center;
+
+      button {
+        margin: 22px;
+        background: black;
+        color: white;
+        padding: 6px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.ansModal {
+  height: 600px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+  background: #ffffff;
+
+  margin-top: 222px;
+  overflow: scroll;
+  font-size: 14px;
+  top: -200px;
+  left: 120px;
+  padding: 8px;
+  position: absolute;
+  z-index: 1;
+
+  .ansA {
+    margin: 12px 0;
+  }
+
+  .ansQ {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .ansAns {
+    p {
+      margin: 2px 0;
+    }
+  }
+  .x {
+    position: absolute;
+    right: 0;
+    padding: 12px;
+    background: #040404;
+    color: #ffffff;
+    cursor: pointer;
+    cursor: pointer;
+  }
+  .btnX {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .playAgain {
+    background: black;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+  }
+}
+.ansModal::-webkit-scrollbar {
+  width: 0.1em;
+}
+
+.ansModal::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+}
+@media (max-width: 677px) {
+  .mainContainer {
+    max-width: 450px;
+
+    .ansContainer {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  @media (max-width: 466px) {
+    .mainContainer {
+      max-width: 330px;
+
+      .container {
+        .scoreModal {
+          width: fit-content;
+          position: relative;
+          left: 0;
+          padding: 12px;
+          font-size: 18px;
+        }
+        .qContainer {
+          font-size: 10px;
+          width: fit-content;
+          padding: 4px;
+        }
+        .ansContainer {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .ansModal {
+      height: 100vh;
+      width: fit-content;
+      left: 0;
+    }
+  }
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: rgb(82, 13, 220);
+}
