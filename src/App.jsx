@@ -80,7 +80,6 @@ function App() {
 
   return (
     <div className="mainContainer">
-      <div className="container">
         {ansModalIsShown && (
           <div className="ansModal">
             <div onClick={() => init()} className="x">
@@ -114,6 +113,7 @@ function App() {
             </div>
           </div>
         )}
+      <div className="container">
 
         {modalIsShown && (
           <div className="scoreModal">
@@ -129,6 +129,9 @@ function App() {
         )}
         {!modalIsShown && !ansModalIsShown && (
           <>
+            <div className="top">        
+            {shown}/{15} 
+         </div>
             <div className="qContainer">{currentQuestion.question}</div>
             <div className="ansContainer">
               <div
